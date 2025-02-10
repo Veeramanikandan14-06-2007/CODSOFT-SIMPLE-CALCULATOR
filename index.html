@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"href="calc.css">
+</head>
+<body>
+    <header>
+        <h1 class="heading">SIMPLE CALCULATOR</h1>
+    </header>
+    <div class="box">
+        <div class="Calculator">
+            <form>
+                <div class="screen">
+                    <input type="text" name="screen" id="screen">
+                </div>
+                <div>
+            <input type="button"class="operator" value="AC" onclick="ClearScreen()">
+             <input type="button"class="operator" value="DE"onclick="screen.value=screen.value.toString().slice(0,-1)">
+             <input type="button" class="operator"value="."onclick="appendtoScreen('.')">
+             <input type="button" class="operator"value="/"onclick="appendScreen('/')">
+            </div>
+            <div>
+                <input type="button" class="operator"value="7"onclick="appendtoScreen('7')">
+                <input type="button" class="operator"value="8"onclick="appendtoScreen('8')">
+                <input type="button" class="operator"value="9"onclick="appendtoScreen('9')">
+                <input type="button"class="operator" value="*"onclick="appendtoScreen('*')">
+            </div>
+            <div>
+                <input type="button" class="operator"value="4"onclick="appendtoScreen('4')">
+                <input type="button" class="operator"value="5"onclick="appendtoScreen('5')">
+                <input type="button" class="operator"value="6"onclick="appendtoScreen('6')">
+                <input type="button"class="operator" value="-"onclick="appendtoScreen('-')">
+            </div>
+            <div>
+                <input type="button" class="operator"value="1"onclick="appendtoScreen('1')">
+                <input type="button" class="operator"value="2"onclick="appendtoScreen('2')">
+                <input type="button" class="operator"value="3"onclick="appendtoScreen('3')">
+                <input type="button"class="operator" value="+"onclick="appendtoScreen('+')">
+            </div>
+            <div>
+                <input type="button" value="00"onclick="appendtoScreen('00')">
+                <input type="button"value="0"onclick="appendtoScreen('0')">
+                <input type="button" class ="Equal operator"value="="onclick="CalcResult()">
+            </div>
+            </form>
+        </div>
+    </div>
+    <script src="calc.js"></script>
+</body>
+</html>
